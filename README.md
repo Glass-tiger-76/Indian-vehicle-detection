@@ -61,6 +61,8 @@ Meanwhile the classes with distinctive shapes — trucks, buses, vans, e-ricksha
 
 This suggests the ceiling here is a labelling/data problem rather than a capacity problem: more instances of the confusable classes would help more than a larger backbone.
 
+These were clearly demonstrated by the Annotated example below
+
 ## Limitations
 
 - Validated only on IRUVD's distribution. Performance on other camera angles, lighting, or regions is unmeasured.
@@ -77,3 +79,23 @@ This suggests the ceiling here is a labelling/data problem rather than a capacit
 - `train.py` — training script
 - `app.py` — Gradio demo (upload image → annotated output + per-class counts)
 - `weights/best.pt` — trained weights
+
+# Annotated Example 
+
+
+<img width="3008" height="2000" alt="Karol_Bagh,_2008_(14)" src="https://github.com/user-attachments/assets/b764546c-2e10-4f33-946f-9d5f313edaea" />
+
+
+
+<img width="3008" height="2000" alt="image" src="https://github.com/user-attachments/assets/c8bf719f-af9f-478b-8cc2-fd6b0ee6d6cf" />
+
+```python
+{
+  "auto-rickshaw": 4,
+  "bike": 7,
+  "tempo": 1,
+  "toto": 1,
+  "bus": 1,
+  "cyclist": 1
+}
+```
