@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vahan Dristi</title>
+<style>
+  body {
+    font-family: -apple-system, system-ui, sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    background: #fafafa;
+    color: #1a1a1a;
+  }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: #666; font-size: 13px; margin-bottom: 20px; }
+
+  input[type=file] { display: none; }
+  label.upload {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  label.upload:hover { background: #333; }
+
+  #status { margin: 14px 0; font-size: 13px; color: #666; }
+  #status.error { color: #c00; }
+
+  #out { max-width: 100%; margin-top: 16px; border-radius: 6px; display: none; }
+
+  table { border-collapse: collapse; width: 100%; margin-top: 16px; font-size: 14px; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid #e5e5e5; }
+  th { font-weight: 600; font-size: 12px; text-transform: uppercase; color: #888; }
+  .bar { background: #1a1a1a; height: 6px; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<h1>Vahan Dristi-Traffic Detection</h1>
+<div class="sub"> Traffic detection · running in your browser</div>
+
+<label class="upload" for="upload">Choose image</label>
+<input type="file" id="upload" accept="image/png, image/jpeg, image/webp">
+
+<div id="status">Loading model…</div>
+
+<canvas id="out"></canvas>
+<div id="results"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.19.2/dist/ort.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
